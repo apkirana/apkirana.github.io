@@ -30,11 +30,21 @@ h1 {
     margin-bottom: 20px;
     border-bottom: 1px dotted #ccc;
     padding-bottom: 10px;
+    display: flex; /* Use Flexbox for layout */
+    align-items: center; /* Vertically align items */
+}
+
+.paper-number {
+    margin-right: 10px;
+    font-weight: bold;
+    color: #777;
 }
 
 .paper-item h2 a {
     color: #0056b3;
     text-decoration: none;
+    display: flex;
+    align-items: center; /* Align thumbnail and title vertically */
 }
 
 .paper-item h2 a:hover {
@@ -47,4 +57,20 @@ h1 {
 
 .paper-item p a {
    color: #555;
+}
+
+.thumbnail {
+    width: 50px; /* Adjust size as needed */
+    height: 50px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    object-fit: cover;  /* Ensures the image fills the space without distortion */
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
 }
