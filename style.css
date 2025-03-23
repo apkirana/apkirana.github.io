@@ -25,13 +25,13 @@ h1 {
     list-style: none;
     padding: 0;
 }
-
 .paper-item {
     margin-bottom: 20px;
     border-bottom: 1px dotted #ccc;
     padding-bottom: 10px;
-    display: flex; /* Use Flexbox for layout */
-    align-items: center; /* Vertically align items */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .paper-number {
@@ -40,31 +40,39 @@ h1 {
     color: #777;
 }
 
-.paper-item h2 a {
+.paper-item a {
     color: #0056b3;
     text-decoration: none;
-    display: flex;
-    align-items: center; /* Align thumbnail and title vertically */
+    display: block;
+    margin-bottom: 5px;
 }
 
-.paper-item h2 a:hover {
+.paper-item a:hover {
     text-decoration: underline;
 }
 
-.paper-item p {
+.paper-details {
+    margin-left: 20px;
+    font-size: 0.9em;
+    display: flex; /* Enable Flexbox for details */
+    align-items: center; /* Align items vertically */
+}
+
+.publication-date {
+    color: #888;
+    margin-right: 10px; /* Add spacing between date and source */
+}
+
+.source {
     color: #555;
 }
 
-.paper-item p a {
-   color: #555;
+.paper-item p { /* Remove this rule, it is no longer necessary */
+    color: #555;
 }
 
-.thumbnail {
-    width: 50px; /* Adjust size as needed */
-    height: 50px;
-    margin-right: 10px;
-    border: 1px solid #ddd;
-    object-fit: cover;  /* Ensures the image fills the space without distortion */
+.paper-item p a { /*Remove this rule, it is no longer necessary*/
+    color: #555;
 }
 
 .footer {
@@ -74,3 +82,4 @@ h1 {
     border-top: 1px solid #ccc;
     margin-top: 20px;
 }
+
