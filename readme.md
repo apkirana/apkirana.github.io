@@ -4,7 +4,7 @@ This repository hosts a simple website for my personal collection of paper revie
 
 ## Accessing the Website
 
-You can access the live website at: **https://apkirana.github.io/paper-reviews/**
+You can access the live website at: **https://apkirana.github.io/**
 
 ## About this Site
 
