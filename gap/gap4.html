@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Gap</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css"> 
+    <style>
+        .table thead th {
+            background-color: #fb8500; /* Light orange background for table header */
+            color: white; /* White text for headers */
+        }
+        .table tbody td {
+            background-color: rgb(245, 243, 241); /* White background for table body */
+        }
+        .footer {
+            background-color: #dc7805f0; /* Dark footer */
+            padding: 15px 0;
+        }
+
+        .custom-header {
+            background-color:  #fb8500;
+        }
+        .custom-card {
+            background-color: #ffffff; /* Dark grey for cards */
+            border: 1px solid #d28314; /* Soft orange border */
+        }
+        a {
+            color: #121211; /* Soft orange links */
+        }
+        a:hover {
+            color: #ffb007; /* Brighter orange on hover */
+        }
+        .priority-high {
+            color: #cc0000;
+        }
+        
+        .priority-medium {
+            color: #e68a00;
+        }
+        
+        .priority-low {
+            color: #007300;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+  
+    <header class="custom-header text-white text-center py-4">
+        <h1>Research Gap</h1>
+    </header>
+    
+   
+    <div class="card custom-card mb-5">
+        <div class="card-body">
+            <a href="#" target="_blank" class="badge badge-warning">Reviewed Paper</a><!-- Added badge here -->
+            <p class="mt-3">
+                <ul class="list-group">
+                    <li class="list-group-item custom-card">
+                        <a href="https://www.mdpi.com/2072-4292/17/1/162" target="_blank">Advancements in Vision–Language Models for Remote Sensing: Datasets, Capabilities, and Enhancement Techniques</a> 
+                </ul>
+            </p>
+        </div>
+    </div>
+    
+    <div class="table-container my-4">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Research Gap</th>
+                    <th>Specific Example from Paper</th>
+                    <th>Severity</th>
+                    <th>Affected Paper/Model</th>
+                    <th>Potential Impact</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Regression Tasks</td>
+                    <td>Text-based tokenization leads to precision loss in continuous value prediction.</td>
+                    <td>Tokenization of "100" into ["1", "00"] causes errors in AGB (Above-Ground Biomass) estimation tasks.</td>
+                    <td>High</td>
+                    <td>REO-VLM</td>
+                    <td>Improved environmental monitoring and carbon stock calculations.</td>
+                </tr>
+                <tr>
+                    <td>Multispectral/SAR Adaptation</td>
+                    <td>RGB-centric architectures underperform on non-RGB data (e.g., SAR, hyperspectral).</td>
+                    <td>SpectralGPT struggles with SAR data due to inherited RGB-focused pretraining frameworks.</td>
+                    <td>High</td>
+                    <td>SpectralGPT</td>
+                    <td>Enhanced utility in flood mapping, mineral exploration, and military surveillance.</td>
+                </tr>
+                <tr>
+                    <td>Multimodal Output Limitation</td>
+                    <td>Text-only outputs limit utility in dense predictions (e.g., segmentation, 3D).</td>
+                    <td>VLMs cannot generate segmentation masks or 3D models, restricting flood mapping applications.</td>
+                    <td>Moderate-High</td>
+                    <td>CPSeg</td>
+                    <td>Enable real-time hazard mapping and infrastructure planning.</td>
+                </tr>
+                <tr>
+                    <td>Temporal Data Handling</td>
+                    <td>Static image analysis neglects temporal dynamics critical for trends.</td>
+                    <td>Changen2’s synthetic temporal data lacks real-world complexity for deforestation monitoring.</td>
+                    <td>Moderate</td>
+                    <td>Changen2</td>
+                    <td>Improved climate change prediction and disaster response.</td>
+                </tr>
+                <tr>
+                    <td>Benchmarking</td>
+                    <td>No unified standards for cross-task evaluation (e.g., VQA, RSICC).</td>
+                    <td>RSVQA-HR and LEVIR-CC use incompatible metrics, complicating cross-model comparisons.</td>
+                    <td>Moderate</td>
+                    <td>RSVQA, LEVIR-CC</td>
+                    <td>Accelerate model innovation via standardized benchmarks.</td>
+                </tr>
+                <tr>
+                    <td>Ethical AI &amp; Bias</td>
+                    <td>Auto-annotated datasets inherit biases from foundation models.</td>
+                    <td>RS5M’s captions generated by BLIP2/GPT-4 reflect urban/rural bias, skewing agricultural monitoring insights.</td>
+                    <td>Moderate</td>
+                    <td>RS5M</td>
+                    <td>Fairer AI applications in policy-making and environmental justice.</td>
+                </tr>
+                <tr>
+                    <td>Sustainability</td>
+                    <td>High computational costs hinder accessibility and scalability.</td>
+                    <td>SkyEyeGPT’s training consumes excessive GPU resources, limiting adoption in resource-constrained regions.</td>
+                    <td>High</td>
+                    <td>SkyEyeGPT</td>
+                    <td>Democratize access to VLM tools for global environmental monitoring.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="table-container my-4">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Priority</th>
+                    <th>Category</th>
+                    <th>Issues</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- High Priority -->
+                <tr>
+                    <td class="priority-high">High</td>
+                    <td>Regression Tasks</td>
+                    <td>Text-based tokenization causes precision loss in continuous value prediction</td>
+                    <td>AGB estimation errors in REO-VLM due to splitting "100" into ["1", "00"]</td>
+                </tr>
+                <tr>
+                    <td class="priority-high">High</td>
+                    <td>Multispectral/SAR Adaptation</td>
+                    <td>RGB architectures ill-suited for SAR/hyperspectral data</td>
+                    <td>SpectralGPT struggles with SAR due to RGB-focused pretraining</td>
+                </tr>
+                <tr>
+                    <td class="priority-high">High</td>
+                    <td>Sustainability</td>
+                    <td>Excessive GPU requirements limit accessibility</td>
+                    <td>SkyEyeGPT requires High-end GPUs unavailable in developing regions</td>
+                </tr>
+
+                <!-- Moderate-High Priority -->
+                <tr>
+                    <td class="priority-high">Moderate-High</td>
+                    <td>Multimodal Output</td>
+                    <td>Text-only outputs restrict segmentation/3D tasks</td>
+                    <td>CPSeg cannot generate flood masks directly via VLMs</td>
+                </tr>
+
+                <!-- Moderate Priority -->
+                <tr>
+                    <td class="priority-medium">Moderate</td>
+                    <td>Temporal Analysis</td>
+                    <td>Static models ignore temporal dynamics</td>
+                    <td>Changen2's synthetic data lacks real-world temporal patterns</td>
+                </tr>
+                <tr>
+                    <td class="priority-medium">Moderate</td>
+                    <td>Benchmarking</td>
+                    <td>Lack unified evaluation standards</td>
+                    <td>RSVQA vs LEVIR-CC use incompatible metrics</td>
+                </tr>
+                <tr>
+                    <td class="priority-medium">Moderate</td>
+                    <td>Ethical AI & Bias</td>
+                    <td>Auto-annotated data inherits LLM biases</td>
+                    <td>RS5M captions show urban/rural bias affecting agriculture insights</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+       
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <footer class="footer text-light text-center">
+        <p>&copy; 2025 AP.Kirana. All rights reserved. <a href="http://s.id/puspakirana" target="_blank">My Website</a></p>
+    </footer>
+</div>
+</body>
+</html>
