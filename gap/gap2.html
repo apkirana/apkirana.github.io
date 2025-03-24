@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Gap</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css"> 
+    <style>
+        .table thead th {
+            background-color: #fb8500; /* Light orange background for table header */
+            color: white; /* White text for headers */
+        }
+        .table tbody td {
+            background-color: rgb(245, 243, 241); /* White background for table body */
+        }
+        .footer {
+            background-color: #dc7805f0; /* Dark footer */
+            padding: 15px 0;
+        }
+
+        .custom-header {
+            background-color:  #fb8500;
+        }
+        .custom-card {
+            background-color: #ffffff; /* Dark grey for cards */
+            border: 1px solid #d28314; /* Soft orange border */
+        }
+        a {
+            color: #121211; /* Soft orange links */
+        }
+        a:hover {
+            color: #ffb007; /* Brighter orange on hover */
+        }
+
+        .priority-high {
+            color: #cc0000;
+        }
+        
+        .priority-medium {
+            color: #e68a00;
+        }
+        
+        .priority-low {
+            color: #007300;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+  
+    <header class="custom-header text-white text-center py-4">
+        <h1>Research Gap</h1>
+    </header>
+    
+   
+    <body>
+        <div class="card custom-card mb-5">
+            <div class="card-body">
+                <a href="gap/gap2.html" target="_blank" class="badge badge-warning">Reviewed Blog</a><!-- Added badge here -->
+                <p class="mt-3">
+                    <ul class="list-group">
+                        <li class="list-group-item custom-card">
+                            <a href="https://huggingface.co/blog/vision_language_pretraining" target="_blank">A Dive into Vision-Language Models (Blog Post)</a> 
+                        </li>
+                    </ul>
+                </p>
+            </div>
+            
+        </div>
+       
+
+
+         <div class="table-container my-4">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Research Gap</th>
+                        <th>Specific Example from Blog</th>
+                        <th>Severity</th>
+                        <th>Affected Potential Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Application Scope</td>
+                        <td>PrefixLM-based models are limited to tasks like captioning or VQA, not broader tasks</td>
+                        <td>SimVLM's architecture restricts it to image captioning/VQA, not object detection or segmentation</td>
+                        <td>Moderate</td>
+                        <td>Limits versatility in real-world applications requiring diverse vision-language tasks</td>
+                    </tr>
+                    <tr>
+                        <td>Data Quality</td>
+                        <td>Noisy image-text pairs in datasets affect model performance</td>
+                        <td>ALIGN and LAION-5B create custom preprocessing/filtering to handle noise in web-scraped data</td>
+                        <td>High</td>
+                        <td>Reduces model generalization and necessitates costly dataset curation</td>
+                    </tr>
+                    <tr>
+                        <td>Model Complexity</td>
+                        <td>MLM/ITM approaches require pre-trained object detectors for region proposals</td>
+                        <td>VisualBERT relies on Faster R-CNN for object detection, adding computational overhead</td>
+                        <td>High</td>
+                        <td>Increases deployment complexity and limits scalability</td>
+                    </tr>
+                    <tr>
+                        <td>Domain Adaptation</td>
+                        <td>Scarcity of domain-specific aligned datasets</td>
+                        <td>Clinical-BERT struggles with limited medical image-text pairs</td>
+                        <td>High</td>
+                        <td>Hinders adoption in healthcare and robotics</td>
+                    </tr>
+                    <tr>
+                        <td>Cross-Modal Fusion</td>
+                        <td>Cross-attention methods may lack efficiency in large-scale fusion</td>
+                        <td>FIBER's gating mechanism remains unproven for massive datasets</td>
+                        <td>Moderate</td>
+                        <td>Limits real-time applications on edge devices</td>
+                    </tr>
+                    <tr>
+                        <td>Zero-Shot Transfer</td>
+                        <td>Frozen models still require adaptation layers</td>
+                        <td>Flamingo uses Perceiver Resampler layers requiring partial training</td>
+                        <td>Moderate</td>
+                        <td>Prevents true zero-shot generalization</td>
+                    </tr>
+                    <tr>
+                        <td>Emerging Applications</td>
+                        <td>Nascent 3D/robotics tasks lack validation</td>
+                        <td>AvatarCLIP and OWL-ViT constrained by limited datasets</td>
+                        <td>Low</td>
+                        <td>Delays deployment in AR/VR and autonomous systems</td>
+                    </tr>
+                    <tr>
+                        <td>Training Dependency</td>
+                        <td>"No training" methods still require minimal aligned data</td>
+                        <td>ASIF relies on small datasets for similarity search</td>
+                        <td>Moderate</td>
+                        <td>Limits applicability in data-scarce domains</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="margin-top: 30px; font-family: Arial, sans-serif;">
+                <h3>Key Observations:</h3>
+                <ul>
+                    <li><strong>High-Priority Challenges:</strong> Data noise and model complexity are critical bottlenecks</li>
+                    <li><strong>Medium-Priority Limitations:</strong> Architecture constraints reduce task flexibility</li>
+                    <li><strong>Low-Priority Gaps:</strong> Emerging applications need better validation frameworks</li>
+                </ul>
+            </div>
+
+            <div class="table-container my-4">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>Priority Category</th>
+                            <th>Issues</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="priority-high">High</td>
+                            <td>Noisy image-text pairs degrade model performance</td>
+                            <td>ALIGN and LAION-5B rely on custom preprocessing/filtering to handle noise in web-scraped datasets</td>
+                        </tr>
+                        <tr>
+                            <td class="priority-high">High</td>
+                            <td>MLM/ITM approaches require pre-trained object detectors for region proposals</td>
+                            <td>VisualBERT depends on Faster R-CNN for object detection, increasing computational and resource demands</td>
+                        </tr>
+                        <tr>
+                            <td class="priority-high">High</td>
+                            <td>Scarcity of aligned datasets in specialized domains (e.g., medical, robotics)</td>
+                            <td>Clinical-BERT faces challenges due to limited medical image-text pairs for robust training</td>
+                        </tr>
+                        <tr>
+                            <td class="priority-medium">Medium</td>
+                            <td>PrefixLM-based models restricted to narrow tasks (e.g., VQA, captioning)</td>
+                            <td>SimVLM's architecture limits its use in broader tasks like object detection or segmentation</td>
+                        </tr>
+                        <tr>
+                            <td class="priority-medium">Medium</td>
+                            <td>Cross-attention fusion methods lack scalability for large datasets</td>
+                            <td>FIBER improves fusion efficiency with gating, but scalability remains unverified</td>
+                        </tr>
+                        <tr>
+                            <td class="priority-medium">Medium</td>
+                            <td>Frozen models require adaptation layers for fine-tuning</td>
+                            <td>Flamingo integrates Perceiver Resampler layers on frozen backbones for few-shot learning</td>
+                        </tr>
+                        <tr>
+                            <td class="priority-medium">Medium</td>
+                            <td>"No training" strategies still rely on minimal aligned data</td>
+                            <td>ASIF uses small dataset of multi-modal pairs to craft similarity-based latent spaces</td>
+                        </tr>
+                        <tr>
+                            <td class="priority-low">Low</td>
+                            <td>Emerging applications (e.g., 3D modeling, robotics) lack robustness</td>
+                            <td>AvatarCLIP and OWL-ViT show promise but are limited by sparse 3D/robotics datasets</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+         </div>
+       
+    </body>
+       
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <footer class="footer text-light text-center">
+        <p>&copy; 2025 AP.Kirana. All rights reserved. <a href="http://s.id/puspakirana" target="_blank">My Website</a></p>
+    </footer>
+</div>
+</body>
+</html>

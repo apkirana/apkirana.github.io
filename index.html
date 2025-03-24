@@ -3,71 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paper Reviews</title>
-    <link rel="stylesheet" href="style.css">
+    <title>PhD Journey Notes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #000000; /* Dark background */
+            color: #ffffff; /* White text */
+        }
+
+        .custom-header {
+            background-color:  #fb8500;
+        }
+        .custom-card {
+            background-color: #1e1e1e; /* Dark grey for cards */
+            border: 1px solid #ffb703; /* Soft orange border */
+        }
+        a {
+            color: #ffb703; /* Soft orange links */
+        }
+        a:hover {
+            color: #ffc107; /* Brighter orange on hover */
+        }
+        .footer {
+            background-color: #dc7805f0; /* Dark footer */
+            padding: 15px 0;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
+    <header class="custom-header text-white text-center py-4"> <!-- Updated class here -->
         <h1>Paper Reviews</h1>
+    </header>
 
+    <div class="container mt-5">
 
-        <div class="paper-item">
-            <a href="reviews/paper1.html" target="_blank">
-                Review of Large Vision Models and Visual Prompt Engineering    
-            </a>
-        
-            <div class="paper-details">
-                <span class="publication-date">Jul 3, 2023</span>
-                <span class="source">Source: <a href="https://arxiv.org/abs/2307.00855" target="_blank">arXiv</a></span>
-            </div>
-           
-        </div>
-
-
-        <div class="paper-item">
-            <a href="reviews/paper2.html" target="_blank">
-                Vision-Language Models in Remote Sensing: Current Progress and Future Trends    
-            </a>
-    
-            <div class="paper-details">
-                <span class="publication-date">Apr 2, 2024</span>
-                <span class="source">Source: <a href="https://arxiv.org/abs/2305.05726" target="_blank">arXiv</a></span>
-            </div>
-        </div>
-
-            <!-- Add more paper items here 
-            <div class="paper-item">
-                <a href="reviews/paper3.html" target="_blank">
-                    NaN
-                </a>
+        <div class="card custom-card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <a href="reviews/paper4/review.html" target="_blank">Advancements in Vision–Language Models for Remote Sensing: Datasets, Capabilities, and Enhancement Techniques</a>
+                </h5>
                 <div class="paper-details">
-                    <span class="publication-date">Oct 11, 2024</span>
-                    <span class="source">Source: <a href="https://arxiv.org/abs/1810.04805" target="_blank">arXiv</a></span>
+                    <span class="badge badge-warning">Jan 6, 2025</span>
+                    <span class="source">Source: <a href="https://www.mdpi.com/2072-4292/17/1/162" target="_blank">MDPI</a></span>
                 </div>
             </div>
-        -->
+        </div>
+
+
+        <div class="card custom-card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <a href="reviews/paper2.html" target="_blank">Vision-Language Models in Remote Sensing: Current Progress and Future Trends</a>
+                </h5>
+                <div class="paper-details">
+                    <span class="badge badge-warning">Apr 2, 2024</span>
+                    <span class="source">Source: <a href="https://arxiv.org/abs/2305.05726" target="_blank">arXiv</a></span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card custom-card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <a href="reviews/paper1.html" target="_blank">Review of Large Vision Models and Visual Prompt Engineering</a>
+                </h5>
+                <div class="paper-details">
+                    <span class="badge badge-warning">Jul 3, 2023</span>
+                    <span class="source">Source: <a href="https://arxiv.org/abs/2307.00855" target="_blank">arXiv</a></span>
+                </div>
+            </div>
+        </div>
+
+     
+        <div class="card custom-card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <a href="reviews/paper3/review.html" target="_blank">A Dive into Vision-Language Models (Blog Post) </a>
+                </h5>
+                <div class="paper-details">
+                    <span class="badge badge-warning">Feb 3, 2023</span>
+                    <span class="source">Source: <a href="https://huggingface.co/blog/vision_language_pretraining" target="_blank">🤗 Hugging Face</a></span>
+                </div>
+            </div>
+        </div>
+        <!-- Research Gap section styled as a card -->
+
+        <header class="custom-header text-white text-center py-4">
             <h1>Research Gap</h1>
-            <div class="paper-insights">
-                <p>
-                    <a href="reviews/gap2.html" target="_blank">1. Research Gap</a>
+        </header>
+    <!-- Research Gap section  -->
+        <div class="card custom-card mb-5">
+            <div class="card-body">
+                <a href="gap/gap1.html" target="_blank" class="badge badge-info">1. Research Gap</a><!-- Added badge here -->
+                <p class="mt-3">
+                    <ul class="list-group">
+                        <li class="list-group-item custom-card">
+                            <a href="https://arxiv.org/abs/2307.00855" target="_blank">Review of Large Vision Models and Visual Prompt Engineering</a> - vs -
+                            <a href="https://arxiv.org/abs/2305.05726" target="_blank">Vision-Language Models in Remote Sensing: Current Progress and Future Trends</a>
+                        </li>
+                    </ul>
                 </p>
-                <ul>
-                    <li>
-                        <a href="https://arxiv.org/abs/2307.00855" target="_blank"> Review of Large Vision Models and Visual Prompt Engineering</a> - vs -
-                        <a href="https://arxiv.org/abs/2305.05726" target="_blank">Vision-Language Models in Remote Sensing: Current Progress and Future Trends</a> 
-                    </li>
-                </ul>
-            
             </div>
 
+<!-- Research Gap   -->
+            <div class="card-body">
+                <a href="gap/gap2.html" target="_blank" class="badge badge-info">2. Research Gap</a><!-- Added badge here -->
+                <p class="mt-3">
+                    <ul class="list-group">
+                        <li class="list-group-item custom-card">
+                            <a href="https://huggingface.co/blog/vision_language_pretraining" target="_blank">A Dive into Vision-Language Models (Blog Post)</a> 
+                        </li>
+                    </ul>
+                </p>
+            </div>
             
-
         </div>
-        </div>
+<!-- Research Gap endsection  -->
+     
 
-    <footer class="footer">
-        <p>&copy; 2025 AP.Kirana. All rights reserved. <a href="http://s.id/puspakirana" target="_blank">My Website</a></p>
+    </div>
+
+
+<!-- footer-->
+
+    <footer class="footer text-light text-center">
+        <div class="container">
+            <p>&copy; 2025 AP.Kirana. All rights reserved. <a href="http://s.id/puspakirana" target="_blank">My Website</a></p>
+        </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-

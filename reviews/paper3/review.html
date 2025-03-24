@@ -1,0 +1,495 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:12.0pt;
+	font-family:"Aptos",sans-serif;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	line-height:115%;
+	font-size:12.0pt;
+	font-family:"Aptos",sans-serif;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	line-height:115%;
+	font-size:12.0pt;
+	font-family:"Aptos",sans-serif;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	line-height:115%;
+	font-size:12.0pt;
+	font-family:"Aptos",sans-serif;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	line-height:115%;
+	font-size:12.0pt;
+	font-family:"Aptos",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:115%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ 
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+/* local css */
+    .custom-header {
+            background-color:  #fb8500;
+        }
+
+         body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            margin: 20px;
+        }
+      
+</style>
+
+</head>
+
+<body lang=EN-US>
+
+    <header class="custom-header text-white text-center py-4"> <!-- Updated class here -->
+        <h1>Blog Reviews</h1>
+    </header>
+
+<div class=WordSection1>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:normal'><b><span
+style='font-size:16.0pt;font-family:"Segoe UI",sans-serif;color:#404040'>A Dive
+into Vision-Language Models</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-family:"Segoe UI",sans-serif;
+color:#404040'>Background:</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-family:"Segoe UI",sans-serif;
+color:#404040'>Introducing joint vision-language models focusing on how they're
+trained</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-family:"Segoe UI",sans-serif;
+color:#404040'>vision-language</span></b><span style='font-family:"Segoe UI",sans-serif;
+color:#404040'>” model has their ability to <b>process both images (vision) and
+natural language text (language).</b> This process depends on the inputs,
+outputs, and the task these models are asked to perform.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><img width=468 height=138
+id="Picture 1" src="image/image001.png" alt=drawing></p>
+
+<p class=MsoNormal style='line-height:normal'>How to predict? The<span
+style='font-family:"Segoe UI",sans-serif;color:#404040'> <b>model needs to
+understand</b> both the <b>input image</b> and the <b>text prompts.</b></span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-family:"Segoe UI",sans-serif;
+color:#404040'>Various Form Example:</span></b></p>
+
+<p class=MsoListParagraph style='text-indent:-.25in;line-height:normal'><b><span
+style='font-size:10.0pt'>a.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></b><b>Image retrieval from natural language text.</b></p>
+
+<ol start=2 type=a>
+ <li class=MsoNormal style='line-height:normal'><b>Phrase grounding</b>, i.e.,
+     performing object detection from an input image and natural language
+     phrase (example: A&nbsp;young person&nbsp;swings a&nbsp;bat).</li>
+ <li class=MsoNormal style='line-height:normal'><b>Visual question answering</b>,
+     i.e., finding answers from an input image and a question in natural
+     language.</li>
+ <li class=MsoNormal style='line-height:normal'><b>Generate a caption for a
+     given image</b>. This can also take the form of conditional text
+     generation, where you'd start with a natural language prompt and an image.</li>
+ <li class=MsoNormal style='line-height:normal'><b>Detection of hate speech</b>
+     from social media content involving both images and text modalities.</li>
+</ol>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoListParagraph style='margin-left:.25in;text-indent:-.25in;
+line-height:normal'><b><span style='font-family:"Segoe UI",sans-serif;
+color:#404040'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span></b><b><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>Methodology</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-family:"Segoe UI",sans-serif;
+color:#404040'>Five core learning strategies</span></b><span style='font-family:
+"Segoe UI",sans-serif;color:#404040'>&nbsp;for training vision-language models
+(VLMs):</span></p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal style='color:#404040;margin-bottom:3.0pt;line-height:normal'><b><span
+     style='font-family:"Segoe UI",sans-serif'>Contrastive Learning</span></b></li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:3.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Segoe UI",sans-serif;
+color:#404040'>It aims to align representations of images and text into a
+shared embedding space, where semantically similar pairs (e.g., an image and
+its caption) are close, while dissimilar pairs are far apart.</span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:3.0pt;
+margin-left:.5in;line-height:normal'><img width=558 height=204 id="Picture 2"
+src="image/image002.png" alt="Contrastive Learning"></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;text-indent:-.25in;line-height:normal'><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>a)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><b><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>Goal</span></b><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>: Align image and text
+embeddings into a shared space (e.g., CLIP, ALIGN).</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;text-indent:-.25in;line-height:normal'><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>b)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><b><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>Loss</span></b><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>: Contrastive loss
+(e.g., cosine similarity) to minimize distance between matched pairs and
+maximize for mismatched pairs.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;text-indent:-.25in;line-height:normal'><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>c)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><b><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>Strengths</span></b><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>: Enables zero-shot
+generalization (e.g., image classification).</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;line-height:normal'><span style='font-family:"Segoe UI",sans-serif;
+color:#404040'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=2 type=1>
+ <li class=MsoNormal style='color:#404040;margin-bottom:3.0pt;line-height:normal'><b><span
+     style='font-family:"Segoe UI",sans-serif'>PrefixLM</span></b></li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:3.0pt;
+margin-left:.5in;line-height:normal'><img width=475 height=243 id="Picture 3"
+src="image/image003.png" alt=PrefixLM></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;text-indent:-.25in;line-height:normal'><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>a)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><b><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>Process</span></b><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>: Treat image patches
+as a prefix to text sequences, training autoregressive models (e.g., SimVLM,
+Frozen).</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;text-indent:-.25in;line-height:normal'><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>b)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><b><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>Use Case</span></b><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>: Image captioning,
+VQA.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;text-indent:-.25in;line-height:normal'><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>c)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><b><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>Variants</span></b><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>: &quot;Frozen&quot;
+methods freeze pre-trained language models (LMs) and train only image encoders
+(e.g., ClipCap).</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;line-height:normal'><span style='font-family:"Segoe UI",sans-serif;
+color:#404040'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;line-height:normal'><span style='font-family:"Segoe UI",sans-serif;
+color:#404040'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <li class=MsoNormal style='color:#404040;margin-bottom:3.0pt;line-height:normal'><b><span
+     style='font-family:"Segoe UI",sans-serif'>Frozen PrefixLM</span></b></li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:3.0pt;
+margin-left:.5in;line-height:normal'><img width=435 height=171 id="Picture 5"
+src="image/image004.png" alt="Frozen PrefixLM"></p>
+
+<p class=MsoNormal align=center style='margin-top:0in;margin-right:0in;
+margin-bottom:3.0pt;margin-left:.5in;text-align:center;line-height:normal'>&nbsp;</p>
+
+<ol style='margin-top:0in' start=4 type=1>
+ <li class=MsoNormal style='color:#404040;margin-bottom:3.0pt;line-height:normal'><b><span
+     style='font-family:"Segoe UI",sans-serif'>Multi-modal Fusing with
+     Cross-Attention</span></b></li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:3.0pt;
+margin-left:.5in;line-height:normal'><img width=325 height=287 id="Picture 6"
+src="image/image005.png" alt="Cross Attention Fusing"></p>
+
+<p class=MsoNormal align=center style='margin-top:0in;margin-right:0in;
+margin-bottom:3.0pt;margin-left:.5in;text-align:center;line-height:normal'><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;text-indent:-.25in;line-height:normal'><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>a)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><b><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>Mechanism</span></b><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>: Inject visual
+embeddings into LM layers via cross-attention (e.g., VisualGPT, Flamingo).</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;text-indent:-.25in;line-height:normal'><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>b)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><b><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>Advantage</span></b><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>: Balances text
+generation with visual context without massive datasets.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:3.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Segoe UI",sans-serif;
+color:#404040'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=5 type=1>
+ <li class=MsoNormal style='color:#404040;margin-bottom:3.0pt;line-height:normal'><b><span
+     style='font-family:"Segoe UI",sans-serif'>Masked-Language Modeling (MLM) /
+     Image-Text Matching (ITM)</span></b></li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:3.0pt;
+margin-left:13.5pt;line-height:normal'><img width=496 height=102 id="Picture 7"
+src="image/image006.png" alt="MLM / ITM"></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:3.0pt;
+margin-left:1.0in;text-indent:-.25in;line-height:normal'><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>a.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><b><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>Tasks</span></b><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;text-indent:-1.5in;line-height:normal'><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>i.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>MLM: Predict masked
+text tokens using image context.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;text-indent:-1.5in;line-height:normal'><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ii.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>ITM: Classify if
+image-text pairs match.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;text-indent:-.25in;line-height:normal'><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>b.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><b><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>Models</span></b><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>: VisualBERT, FLAVA
+(combines MLM, ITM, and contrastive loss).</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;line-height:normal'><span style='font-family:"Segoe UI",sans-serif;
+color:#404040'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=6 type=1>
+ <li class=MsoNormal style='color:#404040;margin-bottom:3.0pt;line-height:normal'><b><span
+     style='font-family:"Segoe UI",sans-serif'>No Training</span></b></li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:3.0pt;
+margin-left:.5in;line-height:normal'><img width=405 height=252 id="Picture 8"
+src="image/image007.png" alt=ASIF></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><b><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>Approach</span></b><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>: Use frozen
+pre-trained models (e.g., ASIF uses similarity search; MaGiC uses CLIP for
+iterative optimization).</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-family:"Segoe UI",sans-serif;color:#404040'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-family:"Segoe UI",sans-serif;
+color:#404040'>2. Model Characteristics</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-family:"Segoe UI",sans-serif;
+color:#404040'>Key models and their features:</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='color:#404040;margin-bottom:0in;line-height:normal'><b><span
+     style='font-family:"Segoe UI",sans-serif'>CLIP</span></b><span
+     style='font-family:"Segoe UI",sans-serif'>: Contrastive learning for
+     zero-shot tasks; dual encoders for image/text.</span></li>
+ <li class=MsoNormal style='color:#404040;margin-bottom:0in;line-height:normal'><b><span
+     style='font-family:"Segoe UI",sans-serif'>FLAVA</span></b><span
+     style='font-family:"Segoe UI",sans-serif'>: Combines contrastive, MLM,
+     ITM, and masked-image modeling (MIM) for multi-task learning.</span></li>
+ <li class=MsoNormal style='color:#404040;margin-bottom:0in;line-height:normal'><b><span
+     style='font-family:"Segoe UI",sans-serif'>Flamingo</span></b><span
+     style='font-family:"Segoe UI",sans-serif'>: Inserts cross-attention layers
+     into frozen LMs/video encoders for few-shot learning.</span></li>
+ <li class=MsoNormal style='color:#404040;margin-bottom:0in;line-height:normal'><b><span
+     style='font-family:"Segoe UI",sans-serif'>OWL-ViT/CLIPSeg</span></b><span
+     style='font-family:"Segoe UI",sans-serif'>: Enable zero-shot object
+     detection/segmentation via text prompts.</span></li>
+ <li class=MsoNormal style='color:#404040;margin-bottom:0in;line-height:normal'><b><span
+     style='font-family:"Segoe UI",sans-serif'>ViLT</span></b><span
+     style='font-family:"Segoe UI",sans-serif'>: Lightweight architecture for
+     VQA using patch embeddings (no object detectors).</span></li>
+ <li class=MsoNormal style='color:#404040;margin-bottom:0in;line-height:normal'><b><span
+     style='font-family:"Segoe UI",sans-serif'>VisionEncoderDecoder</span></b><span
+     style='font-family:"Segoe UI",sans-serif'>: Flexible framework (e.g.,
+     TrOCR for OCR).</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-family:"Segoe UI",sans-serif;
+color:#404040'>Common Architectural Traits</span></b><span style='font-family:
+"Segoe UI",sans-serif;color:#404040'>:</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='color:#404040;margin-bottom:0in;line-height:normal'><span
+     style='font-family:"Segoe UI",sans-serif'>Use of transformer-based
+     encoders.</span></li>
+ <li class=MsoNormal style='color:#404040;margin-bottom:0in;line-height:normal'><span
+     style='font-family:"Segoe UI",sans-serif'>Fusion via cross-attention or
+     shared embedding spaces.</span></li>
+ <li class=MsoNormal style='color:#404040;margin-bottom:0in;line-height:normal'><span
+     style='font-family:"Segoe UI",sans-serif'>Pre-training on large-scale
+     image-text datasets (e.g., LAION-5B, COCO).</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-family:"Segoe UI",sans-serif;
+color:#404040'>3. Gaps &amp; Limitations</span></b></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='color:#404040;margin-bottom:0in;line-height:normal'><b><span
+     style='font-family:"Segoe UI",sans-serif'>Task Specificity</span></b><span
+     style='font-family:"Segoe UI",sans-serif'>: Models like PrefixLM are
+     limited to generation tasks (e.g., captioning).</span></li>
+ <li class=MsoNormal style='color:#404040;margin-bottom:0in;line-height:normal'><b><span
+     style='font-family:"Segoe UI",sans-serif'>Data Dependency</span></b><span
+     style='font-family:"Segoe UI",sans-serif'>: Require massive, noisy
+     datasets (e.g., LAION-5B); alignment quality affects performance.</span></li>
+ <li class=MsoNormal style='color:#404040;margin-bottom:0in;line-height:normal'><b><span
+     style='font-family:"Segoe UI",sans-serif'>Modality Constraints</span></b><span
+     style='font-family:"Segoe UI",sans-serif'>: Most focus on image-text;
+     video/audio/3D integration is nascent.</span></li>
+ <li class=MsoNormal style='color:#404040;margin-bottom:0in;line-height:normal'><b><span
+     style='font-family:"Segoe UI",sans-serif'>Computational Cost</span></b><span
+     style='font-family:"Segoe UI",sans-serif'>: Training/fine-tuning large
+     VLMs is resource intensive.</span></li>
+ <li class=MsoNormal style='color:#404040;margin-bottom:0in;line-height:normal'><b><span
+     style='font-family:"Segoe UI",sans-serif'>Robustness</span></b><span
+     style='font-family:"Segoe UI",sans-serif'>: Vulnerable to adversarial
+     attacks and bias inherited from web data.</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-family:"Segoe UI",sans-serif;
+color:#404040'>4. Future Research Opportunities</span></b></p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal style='color:#404040;margin-bottom:3.0pt;line-height:normal'><b><span
+     style='font-family:"Segoe UI",sans-serif'>Expanded Modalities</span></b><span
+     style='font-family:"Segoe UI",sans-serif'>:</span></li>
+ <ul style='margin-top:0in' type=circle>
+  <li class=MsoNormal style='color:#404040;margin-bottom:0in;line-height:normal'><span
+      style='font-family:"Segoe UI",sans-serif'>Integrate video (e.g., X-CLIP),
+      audio, 3D data (e.g., CLIP-NeRF), and sensor inputs (e.g., robotics).</span></li>
+ </ul>
+ <li class=MsoNormal style='color:#404040;margin-bottom:3.0pt;line-height:normal'><b><span
+     style='font-family:"Segoe UI",sans-serif'>Efficient Training</span></b><span
+     style='font-family:"Segoe UI",sans-serif'>:</span></li>
+ <ul style='margin-top:0in' type=circle>
+  <li class=MsoNormal style='color:#404040;margin-bottom:0in;line-height:normal'><span
+      style='font-family:"Segoe UI",sans-serif'>Few-shot/zero-shot adaptation
+      (e.g., Flamingo’s few-shot capabilities).</span></li>
+  <li class=MsoNormal style='color:#404040;margin-bottom:0in;line-height:normal'><span
+      style='font-family:"Segoe UI",sans-serif'>Lightweight architectures for
+      edge deployment.</span></li>
+ </ul>
+ <li class=MsoNormal style='color:#404040;margin-bottom:3.0pt;line-height:normal'><b><span
+     style='font-family:"Segoe UI",sans-serif'>Domain-Specific Applications</span></b><span
+     style='font-family:"Segoe UI",sans-serif'>:</span></li>
+ <ul style='margin-top:0in' type=circle>
+  <li class=MsoNormal style='color:#404040;margin-bottom:0in;line-height:normal'><span
+      style='font-family:"Segoe UI",sans-serif'>Medical (e.g., diagnosis via
+      radiology reports), robotics (e.g., CLIPort for manipulation).</span></li>
+ </ul>
+ <li class=MsoNormal style='color:#404040;margin-bottom:3.0pt;line-height:normal'><b><span
+     style='font-family:"Segoe UI",sans-serif'>Improved Alignment Strategies</span></b><span
+     style='font-family:"Segoe UI",sans-serif'>:</span></li>
+ <ul style='margin-top:0in' type=circle>
+  <li class=MsoNormal style='color:#404040;margin-bottom:0in;line-height:normal'><span
+      style='font-family:"Segoe UI",sans-serif'>Better handling of noisy data
+      (e.g., ALIGN’s noise mitigation).</span></li>
+  <li class=MsoNormal style='color:#404040;margin-bottom:0in;line-height:normal'><span
+      style='font-family:"Segoe UI",sans-serif'>Open-vocabulary detection
+      (e.g., OWL-ViT).</span></li>
+ </ul>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;line-height:normal'><span style='font-family:"Segoe UI",sans-serif;
+color:#404040'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=5 type=1>
+ <li class=MsoNormal style='color:#404040;margin-bottom:3.0pt;line-height:normal'><b><span
+     style='font-family:"Segoe UI",sans-serif'>Ethical &amp; Robust Models</span></b><span
+     style='font-family:"Segoe UI",sans-serif'>:</span></li>
+ <ul style='margin-top:0in' type=circle>
+  <li class=MsoNormal style='color:#404040;margin-bottom:0in;line-height:normal'><span
+      style='font-family:"Segoe UI",sans-serif'>Mitigate biases and improve
+      fairness in multi-modal outputs.</span></li>
+ </ul>
+</ol>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-family:"Segoe UI",sans-serif;
+color:#404040'>5. Practical Takeaways</span></b></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='color:#404040;margin-bottom:0in;line-height:normal'><b><span
+     style='font-family:"Segoe UI",sans-serif'>Hugging Face Support</span></b><span
+     style='font-family:"Segoe UI",sans-serif'>: </span><span style='font-family:
+     "Apple Color Emoji"'>&#129303;</span><span style='font-family:"Segoe UI",sans-serif'>
+     Transformers provides implementations for CLIP, ViLT, CLIPSeg, and others,
+     enabling easy experimentation.</span></li>
+ <li class=MsoNormal style='color:#404040;margin-bottom:0in;line-height:normal'><b><span
+     style='font-family:"Segoe UI",sans-serif'>Emerging Applications</span></b><span
+     style='font-family:"Segoe UI",sans-serif'>: From medical imaging to 3D
+     scene manipulation (e.g., AvatarCLIP), VLMs are enabling cross-domain
+     innovation.</span></li>
+</ul>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

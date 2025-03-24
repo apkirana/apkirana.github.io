@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Gap</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css"> 
+    <style>
+        .table thead th {
+            background-color: #fb8500; /* Light orange background for table header */
+            color: white; /* White text for headers */
+        }
+        .table tbody td {
+            background-color: rgb(245, 243, 241); /* White background for table body */
+        }
+        .footer {
+            background-color: #dc7805f0; /* Dark footer */
+            padding: 15px 0;
+        }
+
+        .custom-header {
+            background-color:  #fb8500;
+        }
+        .custom-card {
+            background-color: #ffffff; /* Dark grey for cards */
+            border: 1px solid #d28314; /* Soft orange border */
+        }
+        a {
+            color: #121211; /* Soft orange links */
+        }
+        a:hover {
+            color: #ffb007; /* Brighter orange on hover */
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+  
+    <header class="custom-header text-white text-center py-4">
+        <h1>Research Gap</h1>
+    </header>
+    
+   
+    <div class="card custom-card mb-5">
+        <div class="card-body">
+            <a href="#" target="_blank" class="badge badge-warning">Reviewed Paper</a><!-- Added badge here -->
+            <p class="mt-3">
+                <ul class="list-group">
+                    <li class="list-group-item custom-card">
+                        <a href="https://arxiv.org/abs/2307.00855" target="_blank">Review of Large Vision Models and Visual Prompt Engineering</a> - vs -
+                        <a href="https://arxiv.org/abs/2305.05726" target="_blank">Vision-Language Models in Remote Sensing: Current Progress and Future Trends</a>
+                    </li>
+                </ul>
+            </p>
+        </div>
+    </div>
+    
+    <div class="table-container my-4">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Research Gap</th>
+                    <th>Specific Example from Paper</th>
+                    <th>Severity</th>
+                    <th>Affected Paper</th>
+                    <th>Potential Impact</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2"><strong>Empirical</strong></td>
+                    <td>Dataset Scarcity</td>
+                    <td>Requires billion-scale datasets vs. current RS datasets (e.g., Million-AID: 1M images only)</td>
+                    <td>🔴 High Priority</td>
+                    <td>Vision-Language Models</td>
+                    <td>Limits model generalization across geographies</td>
+                </tr>
+                <tr>
+                    <td>Synthetic Data Reliance</td>
+                    <td>Diffusion models require quality text prompts (e.g., unstable for rare land cover classes)</td>
+                    <td>🟡 Medium Priority</td>
+                    <td>Vision-Language Models</td>
+                    <td>Introduces artifacts in training data</td>
+                </tr>
+                <tr>
+                    <td rowspan="2"><strong>Theoretical</strong></td>
+                    <td>Domain Knowledge Integration</td>
+                    <td>No physics-based constraints for SAR imagery (e.g., speckle noise modeling in VLMs)</td>
+                    <td>🟡 Medium Priority</td>
+                    <td>Vision-Language Models</td>
+                    <td>Reduces model interpretability</td>
+                </tr>
+                <tr>
+                    <td>Ethical Frameworks</td>
+                    <td>No discussion of biases in prompt design (e.g., CLIPs Western-centric object recognition)</td>
+                    <td>🔴 High Priority</td>
+                    <td>Prompt Engineering</td>
+                    <td>Risks deployment in sensitive applications</td>
+                </tr>
+                <tr>
+                    <td rowspan="2"><strong>Methodological</strong></td>
+                    <td>Spatiotemporal Reasoning</td>
+                    <td>Poor handling of Landsat time-series (8-day revisit cycles not leveraged)</td>
+                    <td>🔴 High Priority</td>
+                    <td>Vision-Language Models</td>
+                    <td>Limits climate change analysis</td>
+                </tr>
+                <tr>
+                    <td>Prompt Generalization</td>
+                    <td>CoOP overfits to textual patterns (e.g., fails on non-English region descriptions)</td>
+                    <td>🟡 Medium Priority</td>
+                    <td>Prompt Engineering</td>
+                    <td>Reduces cross-cultural applicability</td>
+                </tr>
+                <tr>
+                    <td rowspan="2"><strong>Computational</strong></td>
+                    <td>Resource Demands</td>
+                    <td>GPT-3s 175B parameters vs. edge devices (e.g., impossible for drone-based deployment)</td>
+                    <td>🔴 High Priority</td>
+                    <td>Both Papers</td>
+                    <td>Hinders real-time disaster response</td>
+                </tr>
+                <tr>
+                    <td>Edge Deployment</td>
+                    <td>SAM requires 3.2GB RAM vs. field robotics constraints (typically less than 1GB)</td>
+                    <td>🟡 Medium Priority</td>
+                    <td>Prompt Engineering</td>
+                    <td>Limits IoT integration</td>
+                </tr>
+                <tr>
+                    <td rowspan="2"><strong>Evaluation</strong></td>
+                    <td>Cross-Domain Validation</td>
+                    <td>Limited testing on medical images (e.g., SAM's failure on low-contrast tumor boundaries)</td>
+                    <td>🟡 Medium Priority</td>
+                    <td>Prompt Engineering</td>
+                    <td>Obscures healthcare applicability</td>
+                </tr>
+                <tr>
+                    <td>Hardware-Aware Benchmarking</td>
+                    <td>No metrics for memory constraints (e.g., FPS not reported for agricultural robots)</td>
+                    <td>🔴 High Priority</td>
+                    <td>Both Papers</td>
+                    <td>Misguides practical system design</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="table-container my-4">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Priority Category</th>
+                    <th>Issues</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="immediate-attention">
+                    <td rowspan="3">🟥 Immediate Attention (High Severity + High Impact)</td>
+                    <td>1. Dataset Scarcity</td>
+                    <td>Foundation for all VLM progress</td>
+                </tr>
+                <tr class="immediate-attention">
+                    <td>2. Ethical Frameworks</td>
+                    <td>Prevents harmful deployments</td>
+                </tr>
+                <tr class="immediate-attention">
+                    <td>3. Hardware Benchmarking</td>
+                    <td>Essential for real systems</td>
+                </tr>
+                <tr class="strategic-investment">
+                    <td rowspan="2">🟨 Strategic Investment (Medium Severity + High Impact)</td>
+                    <td>1. Spatiotemporal Reasoning</td>
+                    <td>Key for temporal analysis</td>
+                </tr>
+                <tr class="strategic-investment">
+                    <td>2. Resource Demands</td>
+                    <td>Affects scalability</td>
+                </tr>
+                <tr class="long-term-monitoring">
+                    <td rowspan="2">🟩 Long-Term Monitoring (Medium Severity + Medium Impact)</td>
+                    <td>1. Synthetic Data Reliance</td>
+                    <td></td>
+                </tr>
+                <tr class="long-term-monitoring">
+                    <td>2. Prompt Generalization</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+       
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <footer class="footer text-light text-center">
+        <p>&copy; 2025 AP.Kirana. All rights reserved. <a href="http://s.id/puspakirana" target="_blank">My Website</a></p>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>A Dive into Vision-Language Models</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            margin: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 24px;
+        }
+        
+        h2 {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        
+        h3 {
+            font-size: 18px;
+        }
+        
+        p {
+            margin: 10px 0;
+        }
+        
+        ul,
+        ol {
+            margin-left: 20px;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .index {
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+        .custom-header {
+            background-color:  #fb8500;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="custom-header text-white text-center py-4"> <!-- Updated class here -->
+        <h1>Paper Reviews</h1>
+    </header>
+
+    <div class="card custom-card mb-3">
+        <div class="card-body">
+            <h5 class="card-title">
+                <a href="#" target="_blank">Advancements in Vision–Language Models for Remote Sensing: Datasets, Capabilities, and Enhancement Techniques</a>
+            </h5>
+            <div class="paper-details">
+                <span class="badge badge-warning">Jan 6, 2025</span>
+                <span class="source">Source: <a href="https://www.mdpi.com/2072-4292/17/1/162" target="_blank">🤗 Hugging Face</a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="index">
+        <h2>Index</h2>
+        <ol>
+            <li><a href="#background">Background</a></li>
+            <li><a href="#methodology">Methodology</a></li>
+            <li><a href="#gaps">Gaps & Limitations</a></li>
+            <li><a href="#future-research">Future Research Opportunities</a></li>
+            <li><a href="#practical-takeaways">Practical Takeaways</a></li>
+        </ol>
+    </div>
+
+    <h1>A Dive into Vision-Language Models</h1>
+
+    <h2 id="background">1. Background</h2>
+    <p>Introducing joint vision-language models focusing on their training. Vision-language models have the ability to process both images (vision) and natural language text (language). This process depends on the inputs, outputs, and the tasks these models are asked to perform.</p>
+    <img src="image/image001.png" alt="Illustration">
+
+    <h3>How to Predict?</h3>
+    <p>The model needs to understand both the input image and the text prompts.</p>
+
+    <h3>Various Form Examples:</h3>
+    <ol>
+        <li>Image retrieval from natural language text.</li>
+        <li>Phrase grounding: Performing object detection from an input image and natural language phrase (e.g., A young person swings a bat).</li>
+        <li>Visual question answering: Finding answers from an input image and a question in natural language.</li>
+        <li>Generate a caption for a given image using conditional text generation.</li>
+        <li>Detection of hate speech from social media content involving both images and text modalities.</li>
+    </ol>
+
+    <h2 id="methodology">2. Methodology</h2>
+    <p>Five core learning strategies for training vision-language models (VLMs):</p>
+    <ol>
+        <li><strong>Contrastive Learning</strong>: Align representations of images and text into a shared embedding space, where semantically similar pairs are close.</li>
+        <li><strong>PrefixLM</strong>: Treat image patches as a prefix to text sequences, training autoregressive models.</li>
+        <li><strong>Frozen PrefixLM</strong></li>
+        <li><strong>Multi-modal Fusing with Cross-Attention</strong>: Inject visual embeddings into language model layers via cross-attention.</li>
+        <li><strong>Masked-Language Modeling (MLM) / Image-Text Matching (ITM)</strong></li>
+    </ol>
+
+    <h3>Tasks:</h3>
+    <ol>
+        <li>MLM: Predict masked text tokens using image context.</li>
+        <li>ITM: Classify if image-text pairs match.</li>
+    </ol>
+
+    <h3>Models:</h3>
+    <p>VisualBERT, FLAVA (combines MLM, ITM, and contrastive loss).</p>
+
+    <h2 id="gaps">3. Gaps & Limitations</h2>
+    <ul>
+        <li><strong>Task Specificity</strong>: Models like PrefixLM are limited to generation tasks.</li>
+        <li><strong>Data Dependency</strong>: Require massive datasets; alignment quality affects performance.</li>
+        <li><strong>Modality Constraints</strong>: Most models focus on image-text integration.</li>
+        <li><strong>Computational Cost</strong>: Training large VLMs is resource-intensive.</li>
+        <li><strong>Robustness</strong>: Vulnerable to adversarial attacks and bias from data.</li>
+    </ul>
+
+    <h2 id="future-research">4. Future Research Opportunities</h2>
+    <ol>
+        <li><strong>Expanded Modalities</strong>: Integrate video, audio, 3D data, and sensor inputs.</li>
+        <li><strong>Efficient Training</strong>: Discuss few-shot/zero-shot adaptation and lightweight architectures.</li>
+        <li><strong>Domain-Specific Applications</strong>: Examples in medical imaging and robotics.</li>
+        <li><strong>Improved Alignment Strategies</strong>: Better handling of noisy data and open-vocabulary detection.</li>
+    </ol>
+
+    <h2 id="practical-takeaways">5. Practical Takeaways</h2>
+    <ul>
+        <li><strong>Hugging Face Support</strong>: Offers implementations for various models, enabling experimentation.</li>
+        <li><strong>Emerging Applications</strong>: Facilitate innovation in medical imaging and 3D scene manipulation.</li>
+    </ul>
+
+</body>
+
+</html>
