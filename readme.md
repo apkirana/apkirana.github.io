@@ -1,6 +1,6 @@
 # Paper Reviews
 
-This repository hosts a simple website for my personal collection of paper reviews about VLM (Vision Languange Model)
+This repository hosts a simple website for my personal collection of paper reviews about VLM (Vision-Language Model)
 
 ## Accessing the Website
 
